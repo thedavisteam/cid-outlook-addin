@@ -116,7 +116,7 @@
   <!-- Event-based activation for auto CID tagging (OnSend) -->
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
     <Requirements>
-      <bt:Sets>
+      <bt:Sets DefaultMinVersion="1.10">
         <bt:Set Name="Mailbox" MinVersion="1.10" />
       </bt:Sets>
     </Requirements>
