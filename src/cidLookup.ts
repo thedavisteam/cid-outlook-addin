@@ -186,7 +186,8 @@ async function queryChunk(emails: string[]): Promise<CidMatch[]> {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`,
-      'Accept': 'application/json'
+      'Accept': 'application/json',
+      'Prefer': 'HonorNonIndexedQueriesWarningMayFailRandomly'
     }
   });
 
