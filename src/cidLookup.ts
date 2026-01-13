@@ -176,7 +176,7 @@ async function queryChunk(emails: string[]): Promise<CidMatch[]> {
   // Query list items with email filter
   // Build filter for emails
   const emailFilters = emails
-    .map((e) => `fields/Client_x0020_Email_x0020_1 eq '${encodeValue(e)}' or fields/Client_x0020_Email_x0020_2 eq '${encodeValue(e)}'`)
+    .map((e) => `fields/Client_x0020_Email eq '${encodeValue(e)}' or fields/Client_x0020_Email_x0020_2 eq '${encodeValue(e)}'`)
     .join(' or ');
     
   const itemsApiUrl = `https://graph.microsoft.com/v1.0/sites/${siteId}/lists/${listId}/items?$expand=fields&$filter=${emailFilters}`;
@@ -207,10 +207,10 @@ async function queryChunk(emails: string[]): Promise<CidMatch[]> {
 
   for (const item of data.value ?? []) {
     const fields = item.fields;
-    const cid = fields?.KW_x0020_CID as string | undefined;
+    const cid = fields?.Title as string | undefined;
     if (!cid) continue;
     const opportunityName = (fields?.KW_x0020_Opportunity_x0020_Name as string | undefined) ?? undefined;
-    const email1 = (fields?.Client_x0020_Email_x0020_1 as string | undefined)?.toLowerCase();
+    const email1 = (fields?.Client_x0020_Email as string | undefined)?.toLowerCase();
     const email2 = (fields?.Client_x0020_Email_x0020_2 as string | undefined)?.toLowerCase();
     
     const existing = map.get(cid) ?? { cid, opportunityName, matchedEmails: [] };
