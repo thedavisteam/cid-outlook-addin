@@ -20,6 +20,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides"
+  xmlns:mailappor1="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
   xsi:type="MailApp">
   <Id>f9c7c7e2-6b53-4f0e-a38c-6c8f7d1f12e9</Id>
   <Version>3.0.1.0</Version>
@@ -74,7 +75,6 @@
               <LaunchEvent Type="OnNewMessageCompose" FunctionName="onNewMessageCompose" />
               <LaunchEvent Type="OnMessageRecipientsChanged" FunctionName="onRecipientsChanged" />
             </LaunchEvents>
-            <SourceLocation resid="Commands.Url" />
           </ExtensionPoint>
           
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
