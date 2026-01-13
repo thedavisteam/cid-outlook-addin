@@ -2,7 +2,7 @@ export const CONFIG = {
   // SharePoint site hosting CID Register / CID Contacts
   siteUrl: 'https://julieandbryce.sharepoint.com',
   // CID Contacts list name
-  contactsListName: 'CID Contacts',
+  contactsListName: 'CID Register',
   // Regex pattern to detect an existing CID tag in the subject
   cidTagPattern: /\[CID-\d{4}-\d{4}\]/i,
   // Notification IDs used for info bars
