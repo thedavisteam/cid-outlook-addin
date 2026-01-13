@@ -108,54 +108,57 @@
         <bt:String id="TaskPaneButtonLabel" DefaultValue="CID Lookup" />
       </bt:ShortStrings>
       <bt:LongStrings>
-        <!-- Event-based activation for auto CID tagging (OnSend) -->
-        <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
-          <Requirements>
-            <bt:Sets DefaultMinVersion="1.12">
-              <bt:Set Name="Mailbox" MinVersion="1.12" />
-            </bt:Sets>
-          </Requirements>
-          <Hosts>
-            <Host xsi:type="MailHost">
-              <AllFormFactors>
-                <ExtensionPoint xsi:type="LaunchEvent">
-                  <LaunchEvents>
-                    <LaunchEvent Type="OnMessageSend" FunctionName="onMessageSend" SendMode="PromptUser" />
-                  </LaunchEvents>
-                  <SourceLocation resid="Runtime.Url" />
-                </ExtensionPoint>
-                <Runtimes>
-                  <Runtime resid="Runtime.Url" lifetime="long">
-                    <Override>
-                      <FunctionFile resid="Commands.Url" />
-                    </Override>
-                  </Runtime>
-                </Runtimes>
-              </AllFormFactors>
-            </Host>
-          </Hosts>
-          <Resources>
-            <bt:Images>
-              <bt:Image id="Icon16" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-16.png" />
-              <bt:Image id="Icon32" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-32.png" />
-              <bt:Image id="Icon80" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-80.png" />
-            </bt:Images>
-            <bt:Urls>
-              <bt:Url id="Runtime.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/runtime.html" />
-              <bt:Url id="Commands.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/events.js" />
-              <bt:Url id="TaskPane.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/taskpane.html" />
-            </bt:Urls>
-            <bt:ShortStrings>
-              <bt:String id="GroupLabel" DefaultValue="CID" />
-              <bt:String id="TaskPaneButtonLabel" DefaultValue="CID Lookup" />
-            </bt:ShortStrings>
-            <bt:LongStrings>
-              <bt:String id="TaskPaneButtonDesc" DefaultValue="Open the CID lookup panel." />
-            </bt:LongStrings>
-          </Resources>
-        </VersionOverrides>
-
-      </VersionOverrides>
+        <bt:String id="TaskPaneButtonDesc" DefaultValue="Open the CID lookup panel." />
+      </bt:LongStrings>
     </Resources>
+
+    <!-- Event-based activation for auto CID tagging (OnSend) -->
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+      <Requirements>
+        <bt:Sets DefaultMinVersion="1.12">
+          <bt:Set Name="Mailbox" MinVersion="1.12" />
+        </bt:Sets>
+      </Requirements>
+      <Hosts>
+        <Host xsi:type="MailHost">
+          <AllFormFactors>
+            <ExtensionPoint xsi:type="LaunchEvent">
+              <LaunchEvents>
+                <LaunchEvent Type="OnMessageSend" FunctionName="onMessageSend" SendMode="PromptUser" />
+              </LaunchEvents>
+              <SourceLocation resid="Runtime.Url" />
+            </ExtensionPoint>
+            <Runtimes>
+              <Runtime resid="Runtime.Url" lifetime="long">
+                <Override>
+                  <FunctionFile resid="Commands.Url" />
+                </Override>
+              </Runtime>
+            </Runtimes>
+          </AllFormFactors>
+        </Host>
+      </Hosts>
+      <Resources>
+        <bt:Images>
+          <bt:Image id="Icon16" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-16.png" />
+          <bt:Image id="Icon32" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-32.png" />
+          <bt:Image id="Icon80" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-80.png" />
+        </bt:Images>
+        <bt:Urls>
+          <bt:Url id="Runtime.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/runtime.html" />
+          <bt:Url id="Commands.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/events.js" />
+          <bt:Url id="TaskPane.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/taskpane.html" />
+        </bt:Urls>
+        <bt:ShortStrings>
+          <bt:String id="GroupLabel" DefaultValue="CID" />
+          <bt:String id="TaskPaneButtonLabel" DefaultValue="CID Lookup" />
+        </bt:ShortStrings>
+        <bt:LongStrings>
+          <bt:String id="TaskPaneButtonDesc" DefaultValue="Open the CID lookup panel." />
+        </bt:LongStrings>
+      </Resources>
+    </VersionOverrides>
+
   </VersionOverrides>
+</OfficeApp>
 </OfficeApp>
