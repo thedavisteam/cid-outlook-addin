@@ -113,7 +113,7 @@
     </Resources>
   </VersionOverrides>
 
-  <!-- Event-based activation for auto CID tagging (Desktop / New Outlook / OWA where supported) -->
+  <!-- Event-based activation for auto CID tagging (OnSend) -->
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
     <Requirements>
       <bt:Sets>
@@ -123,18 +123,15 @@
     <Hosts>
       <Host xsi:type="MailHost">
         <Runtimes>
-          <Runtime resid="Commands.Url">
+          <Runtime resid="Commands.Url" lifetime="long">
             <Override type="javascript" resid="Commands.Url" />
           </Runtime>
         </Runtimes>
-        <DesktopFormFactor>
-          <FunctionFile resid="Commands.Url" />
-          <ExtensionPoint xsi:type="LaunchEvent">
-            <LaunchEvents>
-              <LaunchEvent Type="OnMessageSend" FunctionName="onMessageSend" SendMode="PromptUser" />
-            </LaunchEvents>
-          </ExtensionPoint>
-        </DesktopFormFactor>
+        <ExtensionPoint xsi:type="LaunchEvent">
+          <LaunchEvents>
+            <LaunchEvent Type="OnMessageSend" FunctionName="onMessageSend" SendMode="PromptUser" />
+          </LaunchEvents>
+        </ExtensionPoint>
       </Host>
     </Hosts>
     <Resources>
