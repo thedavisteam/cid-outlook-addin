@@ -131,7 +131,9 @@
           </ExtensionPoint>
           <Runtimes>
             <Runtime resid="Runtime.Url" lifetime="long">
-              <Override type="javascript" resid="Commands.Url" />
+              <Override>
+                <FunctionFile resid="Commands.Url" />
+              </Override>
             </Runtime>
           </Runtimes>
         </AllFormFactors>
