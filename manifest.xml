@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================
+  CID SUBJECT TAGGER - OFFICE ADD-IN MANIFEST
+  ============================================
+  
+  HOSTING: GitHub Pages
+  URL: https://thedavisteam.github.io/cid-outlook-addin/
+  
+  DEPLOYMENT:
+  1. Run: npm run build
+  2. Upload dist/ contents to GitHub repo: thedavisteam/cid-outlook-addin
+  3. Sideload this manifest in Outlook Web via "Add from file"
+  
+  VERSION HISTORY:
+  - 3.0.1.0 (2026-01-13): Updated for GitHub Pages hosting
+-->
 <OfficeApp
   xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-  xmlns:ov="http://schemas.microsoft.com/office/mailappversionoverrides"
+  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides"
   xsi:type="MailApp">
   <Id>f9c7c7e2-6b53-4f0e-a38c-6c8f7d1f12e9</Id>
-  <Version>2.0.0.0</Version>
+  <Version>3.0.1.0</Version>
   <ProviderName>CID Automation</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="CID Subject Tagger" />
@@ -16,6 +32,7 @@
   <SupportUrl DefaultValue="https://github.com/thedavisteam/cid-outlook-addin" />
   <AppDomains>
     <AppDomain>https://julieandbryce.sharepoint.com</AppDomain>
+    <AppDomain>https://login.microsoftonline.com</AppDomain>
     <AppDomain>https://thedavisteam.github.io</AppDomain>
   </AppDomains>
   <Hosts>
