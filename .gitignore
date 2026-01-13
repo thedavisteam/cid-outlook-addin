@@ -1,9 +1,6 @@
 # Dependencies
 node_modules/
 
-# Build output (uploaded to SharePoint, not GitHub)
-dist/
-
 # IDE
 .vscode/
 *.code-workspace
