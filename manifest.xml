@@ -27,8 +27,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="CID Subject Tagger" />
   <Description DefaultValue="Auto-append CID tags to email subjects based on SharePoint CID Contacts list" />
-  <IconUrl DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/assets/icon-64.png" />
+  <IconUrl DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-64.png" />
   <SupportUrl DefaultValue="https://github.com/thedavisteam/cid-outlook-addin" />
   <AppDomains>
     <AppDomain>https://julieandbryce.sharepoint.com</AppDomain>
@@ -46,7 +46,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/taskpane.html" />
+        <SourceLocation DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/taskpane.html" />
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -94,13 +94,13 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon16" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/assets/icon-16.png" />
-        <bt:Image id="Icon32" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/assets/icon-32.png" />
-        <bt:Image id="Icon80" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/assets/icon-80.png" />
+        <bt:Image id="Icon16" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-16.png" />
+        <bt:Image id="Icon32" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-32.png" />
+        <bt:Image id="Icon80" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/events.js" />
-        <bt:Url id="TaskPane.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/taskpane.html" />
+        <bt:Url id="Commands.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/events.js" />
+        <bt:Url id="TaskPane.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/taskpane.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="CID" />
