@@ -45,6 +45,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: 'public/taskpane.html', to: '.' },
+        { from: 'public/runtime.html', to: '.' },
         { from: 'public/assets', to: 'assets' }
         // NOTE: manifest.xml is NOT copied to dist
         // It goes to Microsoft 365 Admin Center > Integrated Apps
