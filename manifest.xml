@@ -23,7 +23,7 @@
   xmlns:mailappor1="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
   xsi:type="MailApp">
   <Id>f9c7c7e2-6b53-4f0e-a38c-6c8f7d1f12e9</Id>
-  <Version>3.0.1.0</Version>
+  <Version>3.1.0.0</Version>
   <ProviderName>CID Automation</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="CID Subject Tagger" />
