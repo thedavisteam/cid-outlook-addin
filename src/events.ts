@@ -68,11 +68,12 @@ export async function onMessageSend(event: Office.AddinCommands.Event) {
       event.completed(options);
       return;
     }
+    // Allow send even if no CID was found or applied
     event.completed({ allowEvent: true } as any);
   } catch (err: any) {
     console.error('onMessageSend error', err);
-    const options: any = { allowEvent: false, errorMessage: 'CID validation failed. Please try again or check network/auth settings.' };
-    event.completed(options);
+    // Don't block send on errors (auth, network, etc.) - allow send to proceed
+    event.completed({ allowEvent: true } as any);
   }
 }
 
