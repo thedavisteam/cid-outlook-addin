@@ -151,6 +151,7 @@
             </ExtensionPoint>
             <ExtensionPoint xsi:type="LaunchEvent">
               <LaunchEvents>
+                <LaunchEvent Type="OnMessageRecipientsChanged" FunctionName="onRecipientsChanged" />
                 <LaunchEvent Type="OnMessageSend" FunctionName="onMessageSend" SendMode="PromptUser" />
               </LaunchEvents>
               <SourceLocation resid="Runtime.Url" />
