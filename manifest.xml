@@ -120,6 +120,11 @@
       </Requirements>
       <Hosts>
         <Host xsi:type="MailHost">
+          <Runtimes>
+            <Runtime resid="Runtime.Url" lifetime="long">
+              <Override type="javascript" resid="Commands.Url" />
+            </Runtime>
+          </Runtimes>
           <DesktopFormFactor>
             <FunctionFile resid="Commands.Url" />
             <ExtensionPoint xsi:type="MessageComposeCommandSurface">
@@ -144,20 +149,13 @@
                 </Group>
               </OfficeTab>
             </ExtensionPoint>
-          </DesktopFormFactor>
-          <AllFormFactors>
             <ExtensionPoint xsi:type="LaunchEvent">
               <LaunchEvents>
                 <LaunchEvent Type="OnMessageSend" FunctionName="onMessageSend" SendMode="PromptUser" />
               </LaunchEvents>
               <SourceLocation resid="Runtime.Url" />
             </ExtensionPoint>
-            <Runtimes>
-              <Runtime resid="Runtime.Url" lifetime="long">
-                <Override type="javascript" resid="Commands.Url" />
-              </Runtime>
-            </Runtimes>
-          </AllFormFactors>
+          </DesktopFormFactor>
         </Host>
       </Hosts>
       <Resources>
