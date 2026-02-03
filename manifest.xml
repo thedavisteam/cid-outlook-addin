@@ -14,6 +14,8 @@
   
   VERSION HISTORY:
   - 3.0.1.0 (2026-01-13): Updated for GitHub Pages hosting
+  - 3.1.1.0 (2026-02-02): Added CID Register quick links (new item + list view)
+  - 3.1.1.1 (2026-02-02): Cache-bust hosted URLs for faster rollout
 -->
 <OfficeApp
   xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
@@ -23,13 +25,13 @@
   xmlns:mailappor1="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
   xsi:type="MailApp">
   <Id>f9c7c7e2-6b53-4f0e-a38c-6c8f7d1f12e9</Id>
-  <Version>3.1.0.0</Version>
+  <Version>3.1.1.1</Version>
   <ProviderName>CID Automation</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="CID Subject Tagger" />
-  <Description DefaultValue="Auto-append CID tags to email subjects based on SharePoint CID Contacts list" />
-  <IconUrl DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-64.png" />
+  <Description DefaultValue="Auto-append CID tags to email subjects and provide quick links to the CID Register in SharePoint" />
+  <IconUrl DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-32.png?v=3.1.1.1" />
+  <HighResolutionIconUrl DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-64.png?v=3.1.1.1" />
   <SupportUrl DefaultValue="https://github.com/thedavisteam/cid-outlook-addin" />
   <AppDomains>
     <AppDomain>https://julieandbryce.sharepoint.com</AppDomain>
@@ -47,7 +49,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/taskpane.html" />
+        <SourceLocation DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/taskpane.html?v=3.1.1.1" />
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -95,20 +97,20 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon16" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-16.png" />
-        <bt:Image id="Icon32" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-32.png" />
-        <bt:Image id="Icon80" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-80.png" />
+        <bt:Image id="Icon16" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-16.png?v=3.1.1.1" />
+        <bt:Image id="Icon32" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-32.png?v=3.1.1.1" />
+        <bt:Image id="Icon80" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-80.png?v=3.1.1.1" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/events.js" />
-        <bt:Url id="TaskPane.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/taskpane.html" />
+        <bt:Url id="Commands.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/events.js?v=3.1.1.1" />
+        <bt:Url id="TaskPane.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/taskpane.html?v=3.1.1.1" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="CID" />
         <bt:String id="TaskPaneButtonLabel" DefaultValue="CID Lookup" />
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="TaskPaneButtonDesc" DefaultValue="Open the CID lookup panel." />
+        <bt:String id="TaskPaneButtonDesc" DefaultValue="Open the CID panel (lookup + CID Register links)." />
       </bt:LongStrings>
     </Resources>
 
@@ -161,21 +163,21 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon16" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-16.png" />
-          <bt:Image id="Icon32" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-32.png" />
-          <bt:Image id="Icon80" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-80.png" />
+          <bt:Image id="Icon16" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-16.png?v=3.1.1.1" />
+          <bt:Image id="Icon32" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-32.png?v=3.1.1.1" />
+          <bt:Image id="Icon80" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/assets/icon-80.png?v=3.1.1.1" />
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="Runtime.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/runtime.html" />
-          <bt:Url id="Commands.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/events.js" />
-          <bt:Url id="TaskPane.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/taskpane.html" />
+          <bt:Url id="Runtime.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/runtime.html?v=3.1.1.1" />
+          <bt:Url id="Commands.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/events.js?v=3.1.1.1" />
+          <bt:Url id="TaskPane.Url" DefaultValue="https://thedavisteam.github.io/cid-outlook-addin/dist/taskpane.html?v=3.1.1.1" />
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="GroupLabel" DefaultValue="CID" />
           <bt:String id="TaskPaneButtonLabel" DefaultValue="CID Lookup" />
         </bt:ShortStrings>
         <bt:LongStrings>
-          <bt:String id="TaskPaneButtonDesc" DefaultValue="Open the CID lookup panel." />
+          <bt:String id="TaskPaneButtonDesc" DefaultValue="Open the CID panel (lookup + CID Register links)." />
         </bt:LongStrings>
       </Resources>
     </VersionOverrides>

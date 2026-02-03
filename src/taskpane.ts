@@ -3,7 +3,7 @@ import { getCidMatches } from './cidLookup';
 import { CONFIG } from './config';
 
 // VERSION TRACKING - Update this with each build
-const APP_VERSION = '3.0.0';
+const APP_VERSION = '3.1.1';
 const BUILD_TIMESTAMP = '__BUILD_TIME__'; // Will be replaced by webpack
 
 Office.onReady((info) => {
@@ -20,8 +20,31 @@ Office.onReady((info) => {
   
   const lookupBtn = document.getElementById('lookupBtn');
   const applyBtn = document.getElementById('applyBtn');
+  const addToRegisterBtn = document.getElementById('addToRegisterBtn');
+  const openRegisterListBtn = document.getElementById('openRegisterListBtn');
   const emailInput = document.getElementById('emailInput') as HTMLInputElement;
   const resultDiv = document.getElementById('result');
+
+  function openExternal(url: string) {
+    const popup = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!popup && resultDiv) {
+      showResult('Popup blocked. Allow popups for Outlook/add-ins, then try again.', 'error');
+    }
+  }
+
+  // Open SharePoint "New item" form for CID Register
+  if (addToRegisterBtn) {
+    addToRegisterBtn.addEventListener('click', () => {
+      openExternal('https://julieandbryce.sharepoint.com/Lists/CID%20Register/NewForm.aspx');
+    });
+  }
+
+  // Open SharePoint list view for quick search/edit
+  if (openRegisterListBtn) {
+    openRegisterListBtn.addEventListener('click', () => {
+      openExternal('https://julieandbryce.sharepoint.com/Lists/CID%20Register/AllItems.aspx');
+    });
+  }
 
   // Manual lookup button
   if (lookupBtn && emailInput && resultDiv) {
